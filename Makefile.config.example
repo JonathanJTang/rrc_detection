@@ -61,7 +61,8 @@ MATLAB_DIR := /usr/local/MATLAB/R2015a
 # NOTE: this is required only if you will compile the python interface.
 # We need to be able to find Python.h and numpy/arrayobject.h.
 PYTHON_INCLUDE := /usr/include/python2.7 \
-		/usr/lib/python2.7/dist-packages/numpy/core/include
+		/usr/lib/python2.7/dist-packages/numpy/core/include \
+		/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy
 # Anaconda Python distribution is quite popular. Include path:
 # Verify anaconda location, sometimes it's in root.
 # ANACONDA_HOME := $(HOME)/anaconda
@@ -87,7 +88,7 @@ PYTHON_LIB := /usr/lib
 
 # Whatever else you find you need goes here.
 INCLUDE_DIRS := $(PYTHON_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
-LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib
+LIBRARY_DIRS := $(PYTHON_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
 
 # If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies
 # INCLUDE_DIRS += $(shell brew --prefix)/include
